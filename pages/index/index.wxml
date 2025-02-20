@@ -1,0 +1,33 @@
+<view class="container">
+  <button class="upload-button" bindtap="chooseImage">
+    <image wx:if="{{!imageSrc}}" src="/images/upload-icon.png" class="upload-icon" mode="aspectFit"/>
+    <image wx:if="{{imageSrc}}" src="{{imageSrc}}" class="preview-image" mode="aspectFit"/>
+    <text wx:if="{{!imageSrc}}" class="upload-text">上传图片打卡</text>
+  </button>
+
+  <view wx:if="{{recognitionResult}}" class="recognition-result">
+    <view class="result-item">日期：{{recognitionResult.date}}</view>
+    <view class="result-item">类型：{{recognitionResult.type}}</view>
+    <view class="result-item">里程：{{recognitionResult.mileage}} 公里</view>
+    <button class="confirm-button" bindtap="confirmDaka">确认打卡</button>
+  </view>
+
+  <button wx:if="{{imageSrc && !recognitionResult}}" class="recognize-button" bindtap="uploadAndRecognize">识别图片信息</button>
+
+  <view class="calendar-container">
+    <!-- 这里放置你的日历组件，例如 vant-weapp 的 calendar 组件 -->
+    <!-- <van-calendar ... bind:after-render="markCalendarDays" />  -->
+    <!-- 或者你自定义的日历组件 -->
+    <view class="calendar-placeholder">日历组件占位符 (请替换为你的日历组件)</view>
+    <view class="daka-count">本月打卡 {{dakaCount}} 次</view>
+  </view>
+
+  <van-popup show="{{showCoupon}}" bind:close="closeCouponPopup" position="center">
+    <view class="coupon-popup">
+      <image src="{{couponQRCode}}" class="coupon-qrcode" mode="widthFix" />
+      <view class="coupon-info">{{couponInfo}}</view>
+      <button class="save-coupon-button" bindtap="saveCouponQRCode">保存优惠券</button>
+    </view>
+  </van-popup>
+
+</view>

@@ -1,0 +1,95 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+  }
+  
+  .upload-button {
+    width: 200px;
+    height: 200px;
+    border: 2px dashed #ccc;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+  
+  .upload-icon {
+    width: 80px;
+    height: 80px;
+    margin-bottom: 10px;
+  }
+  
+  .preview-image {
+    width: 180px;
+    height: 180px;
+    border-radius: 8px;
+  }
+  
+  .upload-text {
+    font-size: 14px;
+    color: #666;
+  }
+  
+  .recognize-button, .confirm-button {
+    background-color: #007bff;
+    color: white;
+    margin-top: 10px;
+  }
+  
+  .recognition-result {
+    margin-bottom: 20px;
+    padding: 15px;
+    border: 1px solid #eee;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+  }
+  
+  .result-item {
+    margin-bottom: 5px;
+  }
+  
+  .calendar-container {
+    width: 100%;
+    margin-top: 20px;
+  }
+  
+  .calendar-placeholder {
+    border: 1px solid #ccc;
+    padding: 20px;
+    text-align: center;
+    color: #999;
+  }
+  
+  .daka-count {
+    text-align: center;
+    margin-top: 10px;
+    font-size: 14px;
+    color: #666;
+  }
+  
+  .coupon-popup {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .coupon-qrcode {
+    width: 200px;
+    margin-bottom: 10px;
+  }
+  
+  .coupon-info {
+    text-align: center;
+    margin-bottom: 15px;
+    font-size: 16px;
+  }
+  
+  .save-coupon-button {
+    background-color: #28a745;
+    color: white;
+  }
